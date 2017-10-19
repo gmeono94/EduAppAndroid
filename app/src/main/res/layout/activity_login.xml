@@ -39,11 +39,20 @@
                     android:hint="Contraseña"
                     android:id="@+id/EtPassword"/>
 
+
+
                 <Button
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:text="Login"
                     android:id="@+id/ButtonLogin"/>
+
+                <TextView
+                    android:id="@+id/TextViewRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="¿Aún sin cuenta? Registrate aqui"/>
 
             </LinearLayout>
 
