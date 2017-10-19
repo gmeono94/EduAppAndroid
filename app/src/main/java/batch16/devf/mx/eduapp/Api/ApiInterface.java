@@ -4,8 +4,10 @@ package batch16.devf.mx.eduapp.Api;
 
 import java.util.List;
 
+import batch16.devf.mx.eduapp.Models.Alumno;
 import batch16.devf.mx.eduapp.Models.Curso;
 import batch16.devf.mx.eduapp.Models.Profesor;
+import batch16.devf.mx.eduapp.Models.Tarea;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -37,6 +39,24 @@ public interface ApiInterface {
 
     @GET("/api/v1/maestro/{id}")
     public Call<Curso> getCursoById(@Path(value="id")int id);
+
+    @GET("/api/v1/alumno/")
+    Call<List<Alumno>> getAllAlumnos();
+
+    @POST("/api/v1/alumno/")
+    Call<Curso> createAlumno(@Body Alumno alumno);
+
+    @GET("/api/v1/alumno/{id}")
+    public Call<Curso> getAlumnoById(@Path(value="id")int id);
+
+    @GET("/api/v1/tarea/")
+    Call<List<Tarea> >getAllTarea();
+
+    @POST("/api/v1/tarea/")
+    Call<Tarea> createTarea(@Body Alumno alumno);
+
+    @GET("/api/v1/tarea/{id}")
+    public Call<Tarea> getTareaById(@Path(value="id")int id);
 
 
 

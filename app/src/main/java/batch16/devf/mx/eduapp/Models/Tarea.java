@@ -11,7 +11,16 @@ public class Tarea {
     private int num_tarea;
     private String descripcion;
     private int calificacion;
+    private int alumno_id;
 
+
+    public int getAlumno_id() {
+        return alumno_id;
+    }
+
+    public void setAlumno_id(int alumno_id) {
+        this.alumno_id = alumno_id;
+    }
 
     public int getId() {
         return id;
@@ -57,10 +66,11 @@ public class Tarea {
     public String toString() {
         return "Tarea{" +
                 "id=" + id +
-                ", curso_id='" + curso_id + '\'' +
+                ", curso_id=" + curso_id +
                 ", num_tarea=" + num_tarea +
                 ", descripcion='" + descripcion + '\'' +
                 ", calificacion=" + calificacion +
+                ", alumno_id=" + alumno_id +
                 '}';
     }
 }
