@@ -1,16 +1,38 @@
 package batch16.devf.mx.eduapp.Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by gmeono on 17/10/17.
  */
 
 public class Curso {
+
+
+
+    @SerializedName("id")
+    @Expose
     private int id;
-    private int maestroId;
-    private int materiaId;
+    @SerializedName("nombre")
+    @Expose
     private String nombre;
+    @SerializedName("horario")
+    @Expose
     private String horario;
+    @SerializedName("temario")
+    @Expose
     private String temario;
+    @SerializedName("maestro")
+    @Expose
+    private int maestroId;
+    @SerializedName("materia")
+    @Expose
+    private int materiaId;
+
+
+
+
 
     public int getId() {
         return id;

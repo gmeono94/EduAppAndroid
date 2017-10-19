@@ -1,8 +1,16 @@
 package batch16.devf.mx.eduapp.Api;
 
+
+
+import java.util.List;
+
+import batch16.devf.mx.eduapp.Models.Curso;
+import batch16.devf.mx.eduapp.Models.Profesor;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 /**
@@ -11,6 +19,26 @@ import retrofit2.http.Path;
 
 public interface ApiInterface {
 
-    @GET("/wp-json/wp/v2/posts/{id}")
-    public Call<ResponseBody> getPostById(@Path(value="id", encoded = true)String id);
+
+    @GET("/api/v1/maestro/")
+    Call<List<Profesor>> getAllProfesores();
+
+    @POST("/api/v1/maestro/")
+    Call<Profesor> createProfesor(@Body Profesor profesor);
+
+    @GET("/api/v1/maestro/{id}")
+    public Call<ResponseBody> getProfesorById(@Path(value="id", encoded = true)String id);
+
+    @GET("/api/v1/curso/")
+    Call<List<Curso>> getAllCursos();
+
+    @POST("/api/v1/curso/")
+    Call<Curso> createCurso(@Body Curso curso);
+
+    @GET("/api/v1/maestro/{id}")
+    public Call<Curso> getCursoById(@Path(value="id")int id);
+
+
+
+
 }

@@ -1,18 +1,35 @@
 package batch16.devf.mx.eduapp.Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by gmeono on 17/10/17.
  */
 
 public class Profesor {
 
+
+    @SerializedName("id")
+    @Expose
     private int id;
+    @SerializedName("nombre")
+    @Expose
     private String nombre;
+    @SerializedName("apellidos")
+    @Expose
     private String apellido;
-    private String direccion;
-    private String telefono;
+    @SerializedName("image")
+    @Expose
+    private String imagen;
+    @SerializedName("email")
+    @Expose
     private String email;
+    @SerializedName("usuario")
+    @Expose
     private String user;
+    @SerializedName("password")
+    @Expose
     private String password;
 
 
@@ -40,20 +57,12 @@ public class Profesor {
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public String getEmail() {
@@ -86,8 +95,7 @@ public class Profesor {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", telefono='" + telefono + '\'' +
+                ", imagen='" + imagen + '\'' +
                 ", email='" + email + '\'' +
                 ", user='" + user + '\'' +
                 ", password='" + password + '\'' +

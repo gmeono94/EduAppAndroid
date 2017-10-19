@@ -14,7 +14,7 @@ public class ApiServiceGenerator {
 
     private static Retrofit.Builder builder= new Retrofit.Builder().
             addConverterFactory(GsonConverterFactory.create()).
-            baseUrl("http://cefedu.mx");
+            baseUrl("https://151ae154.ngrok.io");
 
     public static ApiInterface createService(){
         if(retrofit == null )
